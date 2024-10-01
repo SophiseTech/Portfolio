@@ -1,3 +1,4 @@
+
 function NavBar() {
   return (
     <div className=" w-full flex justify-center fixed top-0 z-50">
@@ -37,5 +38,6 @@ const SigningButtons = ({ names }) => {
     <button className="mx-2 bg-transparent border-2 border-[#ff48bb] hover:bg-[#ff48bb] text-white px-5 py-2 rounded-full">{names}</button>
   )
 }
+
 
 export default NavBar

@@ -11,8 +11,8 @@ function Main() {
             Unlock the Power of AI <br />for Smarter Websites and Better Business
           </h1>
           <div className="flex gap-3">
-            <button className="bg-[#ff48bb] text-white px-5 py-2 rounded-full">Build Now</button>
-            <button className="bg-transparent border-2 border-[#ff48bb] text-white px-5 py-2 rounded-full">View Works</button>
+            <button className="bg-white text-black px-5 py-2 rounded-full">Build Now</button>
+            <button className="bg-transparent border-2 border-white text-white px-5 py-2 rounded-full">View Works</button>
           </div>
         </div>
       </div>
