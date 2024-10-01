@@ -12,6 +12,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const neo = localFont({
+  src: "./fonts/neo.ttf",
+  variable: "--font-neo",
+  weight: "100 900",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${neo.variable} antialiased`}
       >
         <NavBar/>
         {children}

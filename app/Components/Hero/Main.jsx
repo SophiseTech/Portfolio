@@ -9,7 +9,7 @@ function Main() {
       <div className="w-full h-7 blur-2xl absolute -bottom-5 bg-black"></div>
       <div className="relative z-[1] h-full">
         <div className="h-3/4 flex flex-col gap-5 justify-center items-center">
-          <h1 class="bg-clip-text text-transparent bg-titleTextGradient text-center text-6xl ">
+          <h1 class="bg-clip-text text-transparent bg-titleTextGradient text-center text-6xl italic">
             Unlock the Power of AI <br />for Smarter Websites and Better Business
           </h1>
           <div className="flex gap-3">

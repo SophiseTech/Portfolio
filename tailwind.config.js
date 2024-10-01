@@ -16,6 +16,9 @@ module.exports = {
       },
       boxShadow:{
         heroCircleShadow: "0 0 55px 49px black"
+      },
+      fontFamily: {
+        neo: "var(--font-neo)"
       }
     },
   },
