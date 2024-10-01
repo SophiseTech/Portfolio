@@ -1,3 +1,4 @@
+import GhostButtons from "@/app/Components/Buttons/GhostButtons";
 
 function NavBar() {
   return (
@@ -35,7 +36,7 @@ const ListItem = ({ name }) => {
 
 const SigningButtons = ({ names }) => {
   return (
-    <button className="mx-2 bg-transparent border-2 border-[#ff48bb] hover:bg-[#ff48bb] text-white px-5 py-2 rounded-full">{names}</button>
+    <GhostButtons name={names} />
   )
 }
 

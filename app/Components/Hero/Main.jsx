@@ -1,3 +1,5 @@
+import FillButtons from "@/app/Components/Buttons/FillButtons"
+import GhostButtons from "@/app/Components/Buttons/GhostButtons"
 
 function Main() {
   return (
@@ -11,8 +13,8 @@ function Main() {
             Unlock the Power of AI <br />for Smarter Websites and Better Business
           </h1>
           <div className="flex gap-3">
-            <button className="bg-white text-black px-5 py-2 rounded-full">Build Now</button>
-            <button className="bg-transparent border-2 border-white text-white px-5 py-2 rounded-full">View Works</button>
+            <FillButtons label={"Build Now"} />
+            <GhostButtons name={"View Works"} />
           </div>
         </div>
       </div>
