@@ -10,12 +10,14 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        silver: "#c4c4c4"
       },
       backgroundImage: {
         titleTextGradient: "linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,72,187,1) 100%);"
       },
       boxShadow:{
-        heroCircleShadow: "0 0 55px 49px black"
+        heroCircleShadow: "0 0 55px 49px black",
+        heroBottomGradient: "0 0 41px 45px #0a0a0a"
       },
       fontFamily: {
         neo: "var(--font-neo)"
