@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <div className="p-6 lg:p-16 min-h-screen relative">
-        <div className="w-full h-12 shadow-heroBottomGradient absolute left-0 right-0 -top-2 bg-background"></div>
+        <div className="w-full shadow-heroBottomGradient absolute left-0 right-0 -top-2 bg-background"></div>
         <div className="flex w-11/12 m-auto gap-10">
           <div className="w-5/12 relative flex items-center">
             <img src="/small_gradient.svg" alt="gradient" className="absolute" />
