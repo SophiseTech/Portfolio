@@ -20,7 +20,8 @@ module.exports = {
         heroBottomGradient: "0 0 41px 45px #0a0a0a"
       },
       fontFamily: {
-        neo: "var(--font-neo)"
+        neo: "var(--font-neo)",
+        oswald: ["Oswald"]
       }
     },
   },
