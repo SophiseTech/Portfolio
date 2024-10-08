@@ -29,6 +29,7 @@ export const Carousel = ({
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const ref = useRef([])
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -45,15 +46,15 @@ export const Carousel = ({
     }
   };
 
-  const scrollLeft = () => {
+  const scrollLeft = () => {    
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: ref?.current.length > 0 ? -ref.current[0].clientWidth : -300, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: ref?.current.length > 0 ? ref.current[0].clientWidth : 300, behavior: "smooth" });
     }
   };
 
@@ -109,6 +110,7 @@ export const Carousel = ({
                   },
                 }}
                 key={"card" + index}
+                ref={el => {ref.current[index] = el}}
                 className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl">
                 {item}
               </motion.div>
