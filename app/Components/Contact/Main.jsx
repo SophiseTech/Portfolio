@@ -1,53 +1,9 @@
 'use client'
 import Earth2 from "@/app/Components/Cobe"
 import { useState } from "react";
-import emailjs from 'emailjs-com'
 import ContactForm from "@/app/Components/Contact/Form";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    requirement: ""
-  });
-  const [loading, setLoading] = useState(false)
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    if (loading) return
-    setLoading(true)
-    e.preventDefault();
-    console.log('Form Data:', formData);
-    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-    const userID = process.env.NEXT_PUBLIC_USER_ID;
-    const data = { ...formData, to_email: "info.nyontech@gmail.com" }
-    emailjs.send(serviceID, templateID, data, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Form submitted successfully!');
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-        alert('Failed to send the email.');
-      })
-      .finally(() => {
-        setLoading(false)
-        setFormData({
-          name: '',
-          email: '',
-          requirement: ""
-        })
-      })
-    // You can perform API call or other actions here
-  };
   return (
     // <div className="relative z-[2] max-sm:hidden flex items-center w-10/12 m-auto gap-16">
     //   <div className="w-1/2">

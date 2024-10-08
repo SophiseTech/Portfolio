@@ -45,7 +45,8 @@ export default function ContactForm() {
         setFormData({
           name: '',
           email: '',
-          requirement: ""
+          requirement: "",
+          phone: ""
         })
       })
     // You can perform API call or other actions here
