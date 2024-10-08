@@ -1,4 +1,5 @@
 import GhostButtons from "@/app/Components/Buttons/GhostButtons";
+import Link from "next/link";
 
 function NavBar() {
   return (
@@ -11,7 +12,7 @@ function NavBar() {
             <ListItem name="Home" />
             <ListItem name="About" />
             <ListItem name="Contacts" />
-            <ListItem name="Project" />
+            <ListItem name="Works" path={'/works'} />
           </ul>
         </div>
         <div className="last-element p-3 justify-self-end">
@@ -26,11 +27,13 @@ function NavBar() {
   )
 }
 
-const ListItem = ({ name }) => {
+const ListItem = ({ name, path="/#" }) => {
   return (
-    <li className="cursor-pointer py-2 px-5 mx-2 my-2 hover:backdrop-blur-sm hover:bg-white/5 hover:rounded-full hover:shadow-lg hover:border-1 transition-all">
-      {name}
-    </li>
+    <Link href={path}>
+      <li className="cursor-pointer py-2 px-5 mx-2 my-2 hover:backdrop-blur-sm hover:bg-white/5 hover:rounded-full hover:shadow-lg hover:border-1 transition-all">
+        {name}
+      </li>
+    </Link>
   );
 };
 

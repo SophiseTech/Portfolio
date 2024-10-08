@@ -1,9 +1,12 @@
 'use client'
 import FillButtons from "@/app/Components/Buttons/FillButtons";
-import { works } from "@/app/constants"
+import { Header } from "@/app/Components/Common/Header";
+import { navItems, works } from "@/app/constants"
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 function page() {
+
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef([]);
   const imageRefs = useRef([])
@@ -31,26 +34,13 @@ function page() {
 
   return (
     <div>
-      <Header />
+      <Header title={"WHAT WE HAVE BUILT"} breadcrumbs={[navItems.home, navItems.works]} />
       <div className="">
         {works.map((work, index) => <WorkItem contentRefs={contentRefs} imageRefs={imageRefs} toggleAccordion={toggleAccordion} index={index} work={work} key={index} />)}
       </div>
     </div>
   )
 }
-
-const Header = () => (
-  <div className="h-[40vh] relative overflow-hidden">
-    <img src="/small_gradient2.svg" alt="small_gradient" className="absolute inset-0 w-full h-full blur-3xl" />
-    {/* <img src="/small_gradient.svg" alt="small_gradient" className="absolute left-0 h-full" /> */}
-    <div className="w-full h-4 shadow-heroBottomGradient absolute z-[1] left-0 right-0 -bottom-0 bg-background"></div>
-
-    <div className="bg-black/10 w-full h-full flex flex-col items-center justify-end pb-[5em] relative z-[2]">
-      <h1 className="text-3xl font-bold">WHAT WE HAVE BUILT</h1>
-      <p className="text-sm tracking-widest text-pink-500 mt-2">HOME  <span className="ml-2 text-white">WORKS</span></p>
-    </div>
-  </div>
-)
 
 const WorkItem = ({ work, toggleAccordion, index, contentRefs, imageRefs }) => (
   <div className={`${index === 0 && "border-t"} border-b border-silver py-8 px-8`}>
@@ -73,7 +63,11 @@ const WorkItem = ({ work, toggleAccordion, index, contentRefs, imageRefs }) => (
         <p className="w-1/2 text-xl tracking-widest">
           {work.description}
         </p>
-        <FillButtons label={"View More"} className={'mt-5'} />
+        {work.path &&
+          <Link href={`/works/${work.id}`}>
+            <FillButtons label={"View More"} className={'mt-5'} />
+          </Link>
+        }
       </div>
       <img ref={(el) => (imageRefs.current[index] = el)} src={work.thumbnail} alt="" className="w-1/3" />
     </div>

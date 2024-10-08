@@ -21,7 +21,7 @@ const WorkItem = ({ work }) => (
       <h1 className="mt-5 text-xl tracking-wider">
         {work.description}
       </h1>
-      <Link href={work.path} className="mt-5 block"><GhostButtons name={"View More"} /></Link>
+      {work.path && <Link href={`/works/${work.id}`} className="mt-5 block"><GhostButtons name={"View More"} /></Link>}
     </div>
   </div>
 )
