@@ -14,14 +14,14 @@
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^11.11.1",
+    "framer-motion": "^11.11.2",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.13",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^2.5.3",
     "prop-types": "^15.8.1",
-    "react-carousel-slider": "^2.0.13"
+    "react": "^18",
+    "react-carousel-slider": "^2.0.13",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.3"
   },
   "devDependencies": {
     "postcss": "^8",

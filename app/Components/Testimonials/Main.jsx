@@ -1,7 +1,8 @@
 "use client"
 import React, {Component}  from 'react'
 import Testimonials from './Testimonial'
-import CarouselSlider from 'react-carousel-slider';
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import Image from "next/image";
 function TestimonialsArea() {
   let testimonialData =[
     {
@@ -47,8 +48,7 @@ function TestimonialsArea() {
            <div className="w-10/12 relative m-auto" >
             <div className="text-5xl  my-10 font-bold font-oswald bg-clip-text bg-titleTextGradient text-transparent">What our <br/>customers think?</div>
            
-            <CarouselSlider slideCpnts = {items}   sliderBoxStyle={sliderBoxStyle} itemsStyle={itemsStyle}  accEle={{ dots: false }}/>
-   
+            <Carousel items={items} />
       </div>
 
     
