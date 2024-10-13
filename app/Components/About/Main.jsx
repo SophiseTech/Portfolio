@@ -16,7 +16,7 @@ function About() {
          </ul>
      </div>
 
-     <div className="w-11/12 flex flex-wrap gap-16 mt-10 ">
+     <div className="w-11/12 flex flex-wrap gap-16 mt-8 ">
      
       <TiltEffect imageSrc="/web.png" label="Web Development" />
       <TiltEffect imageSrc="/mobile.png" label="App Development" />

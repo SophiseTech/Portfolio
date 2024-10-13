@@ -39,7 +39,7 @@ export const TiltEffect = ({label,imageSrc}) => {
   return (
     <>
       <div
-        className="card relative h-52 w-52 rounded-xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
+        className="card relative h-60 w-60 rounded-xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
         style={{
