@@ -22,7 +22,7 @@ const neo = localFont({
 
 export const metadata = {
   title: "Nyon Tech",
-  description: "Kerala's leading ",
+  description: "Professional web development services in Kerala. Custom websites, SEO optimization, and e-commerce solutions tailored to your business needs.",
   keywords: "Web development in Kerala Custom web development Kerala E-commerce solutions Kerala E-commerce solutions Kerala E-commerce solutions Kerala Website maintenance Kerala"
 };
 
