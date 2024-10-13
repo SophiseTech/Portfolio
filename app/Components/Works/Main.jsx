@@ -13,8 +13,8 @@ function Works() {
 const WorkItem = ({ work }) => (
   <div className={`w-full flex flex-col md:flex-row gap-5 justify-between odd:md:flex-row-reverse group`}>
     <div className="w-full md:w-1/2 relative flex items-center justify-center md:justify-start group-odd:md:justify-end">
-      <img src="/work_gradient.svg" alt="small_gradient" className="absolute" />
-      <img src={work.thumbnail} alt="ghc_mockup" className="w-3/4 relative z-[1]" />
+      <img loading="lazy" src="/work_gradient.svg" alt="small_gradient" className="absolute" />
+      <img loading="lazy" src={work.thumbnail} alt="ghc_mockup" className="w-3/4 relative z-[1]" />
     </div>
     <div className="mt-5 md:mt-0 text-right group-odd:text-left w-full md:w-1/3 relative z-10">
       <h1 className="text-3xl md:text-5xl font-bold  bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 text-transparent font-grotesk">{work.clientName}</h1>

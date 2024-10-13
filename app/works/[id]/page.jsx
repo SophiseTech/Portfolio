@@ -12,7 +12,7 @@ function page({ params }) {
       <Header title={work.clientName} breadcrumbs={[navItems.home, navItems.works, { label: work.clientName, path: "" }]} />
       <div className="flex flex-col items-center gap-20 md:gap-40 p-6 lg:p-16">
         <div className="flex flex-col items-center w-full">
-          <img className="w-3/4 md:w-2/6 relative top-0 z-50" src={work.thumbnail} alt="mockup_img" />
+          <img loading="lazy" className="w-3/4 md:w-2/6 relative top-0 z-50" src={work.thumbnail} alt="mockup_img" />
           <div className="w-full relative md:w-3/4">
             <Button
               as="div"
@@ -31,13 +31,13 @@ function page({ params }) {
         <div className="flex flex-col md:flex-row gap-10 w-3/4">
           {work.mobileSS?.map((ss, index) => (
             <div key={index} className="border-[25px] border-gray-800">
-              <img src={ss} className="" alt="screenshot_mobile" />
+              <img loading="lazy" src={ss} className="" alt="screenshot_mobile" />
             </div>
           ))}
         </div>
 
         <div className="w-3/4">
-          <img src={work.desktopSS} alt="screenshot_desktop" />
+          <img loading="lazy" src={work.desktopSS} alt="screenshot_desktop" />
         </div>
       </div>
     </div>

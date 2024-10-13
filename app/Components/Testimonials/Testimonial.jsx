@@ -8,7 +8,7 @@ function Testimonials({ review: { imgSrc, reviews, customerData, companyName, ra
           <img src="/testimonialBg.svg" className="opacity-20" alt="" />
 
           <div className="absolute w-[75%] h-[75%] border bg-gray-900 flex items-center justify-center">
-            <img className="h-full aspect-square" src={imgSrc} alt="business man" />
+            <img loading="lazy" className="h-full aspect-square" src={imgSrc} alt="business man" />
           </div>
           <div className="h-[0.5em] w-[0.5em] bg-white absolute -translate-x-1/2 -translate-y-1/2 left-0 top-0"></div>
           <div className="h-[0.5em] w-[0.5em] bg-white absolute translate-x-1/2 -translate-y-1/2 right-0 top-0"></div>
