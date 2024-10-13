@@ -45,7 +45,8 @@ module.exports = {
         silver: "#c4c4c4"
       },
       backgroundImage: {
-        titleTextGradient: "linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,72,187,1) 100%);"
+        titleTextGradient: "linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,72,187,1) 100%);",
+        titleGradientTest: "from-neutral-200 to-neutral-500"
       },
       boxShadow: {
         heroCircleShadow: "0 0 55px 49px black",
@@ -56,7 +57,8 @@ module.exports = {
       },
       fontFamily: {
         neo: "var(--font-neo)",
-        oswald: ["Oswald"]
+        oswald: ["Oswald"],
+        grotesk: ["grotesk", "var(--font-geist-mono)", "sans-serif"]
       }
     },
   },

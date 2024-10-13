@@ -2,6 +2,7 @@
 import './Underline.css'
 import GhostButtons from "@/app/Components/Buttons/GhostButtons";
 import TransitionLink from "@/app/Components/TransitionLink";
+import { motion } from 'framer-motion';
 import Link from "next/link";
 import { useState, useEffect } from "react";
 function NavBar() {
@@ -11,21 +12,18 @@ function NavBar() {
     console.log("menu clicked")
   }
   return (
-    <div className=" w-full flex fixed top-0 z-50">
-      <div className="grid grid-rows-2 w-full backdrop-blur-sm bg-white/5 shadow-lg md:backdrop-blur-none md:bg-transparent md:shadow-none pb-5">
-        <div className="grid grid-cols-2 gap-4 m-auto  md:grid-cols-3 items-center w-full md:w-11/12">
-          <div className="text-5xl font-semibold py-5 md:m-0 m-4 font-neo uppercase">Nyon</div>
+    <div className="w-full flex fixed top-0 z-[102]">
+      <div className={`w-full ${isMenuOpen ? "backdrop-blur-md shadow-lg h-screen" : "backdrop-blur-none"} md:h-auto transition-all ease-linear md:backdrop-blur-none md:bg-transparent md:shadow-none pb-5`}>
+        <div className="grid grid-cols-2 gap-4 m-auto md:grid-cols-3 items-center w-full md:w-11/12">
+          <div className="text-5xl font-semibold py-5 md:m-0 mx-5 my-4 font-neo uppercase">Nyon</div>
 
-
-
-          {/* <SigningButtons names="Contact Us" className="px-4 py-2 " /> */}
-
-          <div onClick={toggleMenu} className=" md:hidden flex items-center justify-end   mx-8 ">
+          {/* Hamburger */}
+          <div onClick={toggleMenu} className="md:hidden flex items-center justify-end mx-5 ">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)" className="w-10 h-10 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> </g></svg>
           </div>
 
 
-
+          {/* desktop */}
           <div className="items-center justify-between hidden w-full md:flex">
             <ul className="flex backdrop-blur-lg  bg-white/5 border border-stone-800 rounded-full shadow-lg shadow-white/5 border-1 my-2 px-3">
 
@@ -37,31 +35,30 @@ function NavBar() {
           </div>
           <div className="hidden md:block  p-3 justify-self-end">
             <SigningButtons names="Contact Us" />
-
-
           </div>
+        </div>
 
-        </div>
-        {/* second row */}{isMenuOpen &&(
-        <div className="md:hidden justify-self-center">
-          <ul className="flex flex-col items-center  px-3">
-            <LargeListItem name="Home" />
-            <LargeListItem name="About" />
-            <LargeListItem name="Contacts" />
-            <LargeListItem name="Works" path={'/works'} />
-          </ul>
-        </div>
-       )}
+        {/* mobile nav */}
+        {isMenuOpen &&
+          <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} className="md:hidden justify-self-center">
+            <ul className="flex flex-col items-start  px-5">
+              <LargeListItem toggleMenu={toggleMenu} name="Home" />
+              <LargeListItem toggleMenu={toggleMenu} name="About" />
+              <LargeListItem toggleMenu={toggleMenu} name="Contacts" />
+              <LargeListItem toggleMenu={toggleMenu} name="Works" path={'/works'} />
+            </ul>
+          </motion.div>
+        }
       </div>
 
     </div>
 
   )
 }
-const LargeListItem = ({ name, path = "/#" }) => {
+const LargeListItem = ({ name, path = "/#", toggleMenu }) => {
   return (
-    <Link href={path}>
-      <li class="cursor-pointer py-2 px-5  font-display text-left link-underline  link-underline font-semibold text-lg font-oswald">
+    <Link href={path} onClick={toggleMenu}>
+      <li class="cursor-pointer py-2 px-5  font-display text-left link-underline  link-underline font-semibold text-lg font-grotesk">
         {name}
       </li>
     </Link>

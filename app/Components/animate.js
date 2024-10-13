@@ -19,9 +19,13 @@ export function animateIn() {
   const anim1 = document.getElementById("anim1")
   const anim2 = document.getElementById("anim2")
   if (anim1 && anim2) {
-    console.log("satisfied", anim1, anim2);
-
-    gsap.timeline().set(anim1, { translateY: "0%" }).set(anim2, { translateY: "100%" }).to(anim1, { translateY: "-100%" }, 0).to(anim2, { translateY: "200%" }, 0).play();
+    gsap.timeline()
+      .set(anim1, { translateY: "0%" })
+      .set(anim2, { translateY: "100%" })
+      .to(anim1, { translateY: "-100%" }, 0)
+      .to(anim2, { translateY: "200%" }, 0)
+      .set(".anim-container", { display: "none" })
+      .play();
   }
 
 }

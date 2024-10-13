@@ -1,75 +1,42 @@
-'use client'
-import FillButtons from "@/app/Components/Buttons/FillButtons";
 import { Header } from "@/app/Components/Common/Header";
 import { navItems, works } from "@/app/constants"
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 
 function page() {
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const contentRefs = useRef([]);
-  const imageRefs = useRef([])
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  const padding = 8
-
-  useEffect(() => {
-
-    contentRefs.current.forEach((ref, index) => {
-      if (ref && activeIndex !== index) {
-        ref.style.height = '0px';
-        ref.style.paddingTop = "0px"
-        ref.style.paddingBottom = "0px"
-      } else if (ref) {
-        ref.style.height = (imageRefs.current[index].clientHeight + 2 * padding) + 'px';
-        ref.style.paddingTop = padding + "px"
-        ref.style.paddingBottom = padding + "px"
-      }
-    });
-  }, [activeIndex]);
-
   return (
     <div>
       <Header title={"WHAT WE HAVE BUILT"} breadcrumbs={[navItems.home, navItems.works]} />
-      <div className="">
-        {works.map((work, index) => <WorkItem contentRefs={contentRefs} imageRefs={imageRefs} toggleAccordion={toggleAccordion} index={index} work={work} key={index} />)}
+      <div className="p-6 lg:p-16 grid grid-cols-1 md:grid-cols-3 gap-5">
+        {works.map((work, index) => <WorkItem work={work} key={index} />)}
       </div>
     </div>
   )
 }
 
-const WorkItem = ({ work, toggleAccordion, index, contentRefs, imageRefs }) => (
-  <div className={`${index === 0 && "border-t"} border-b border-silver py-8 px-8`}>
-    <div
-      className="flex justify-between"
-      onClick={() => { toggleAccordion(index) }}
-    >
-      <button
-        className="w-full text-left focus:outline-none text-3xl tracking-widest font-bold italic text-silver"
-      >
-        {work.clientName}
-      </button>
-      <img src="/down.png" alt="down_arrow" className="border-2 border-silver rounded-full p-3" />
+const WorkItem = ({ work }) => (
+  <div className="basis-1/3 bg-slate-900 p-5 rounded-md group">
+    <div className="bg-[url('/workitem_bg.png')] bg-cover bg-no-repeat px-10 pt-10 bg-slate-800 flex justify-center overflow-hidden rounded-md">
+      <img src="/singlesnaps/yoroi.png " alt="" className="w-full rotate-3 relative -bottom-3 shadow-xl group-hover:scale-105 transition-all duration-500" />
     </div>
-    <div
-      ref={(el) => (contentRefs.current[index] = el)}
-      className={`text-sm tracking-wider transition-all ease-in-out overflow-hidden h-0 py-0 flex items-center justify-between`}
-    >
-      <div>
-        <p className="w-1/2 text-xl tracking-widest">
-          {work.description}
-        </p>
-        {work.path &&
-          <Link href={`/works/${work.id}`}>
-            <FillButtons label={"View More"} className={'mt-5'} />
-          </Link>
-        }
+    <div className="mt-9">
+      <h1 className="text-xl font-bold font-grotesk">{work.clientName}</h1>
+      <p className="line-clamp-2 mt-4 text-stone-300">{work.description}</p>
+
+      <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-0 items-start md:items-center mt-6">
+        <div className="flex items-center">
+          <img src="/workitem_icons/react.png" alt="" className="rounded-full aspect-square p-2 border border-gray-700" />
+          <img src="/workitem_icons/tw.png" alt="" className="bg-slate-900 rounded-full aspect-square p-2 border border-gray-700 relative -left-1" />
+          <img src="/workitem_icons/ts.png" alt="" className="bg-slate-900 rounded-full aspect-square p-2 border border-gray-700 relative -left-2" />
+          <img src="/workitem_icons/threejs.png" alt="" className="bg-slate-900 rounded-full aspect-square p-2 border border-gray-700 relative -left-3" />
+          <img src="/workitem_icons/idk.png" alt="" className="bg-slate-900 rounded-full aspect-square p-2 border border-gray-700 relative -left-4" />
+        </div>
+        <Link href={`/works/${work.id}`}>
+          <div className="flex gap-2 items-center cursor-pointer">
+            <p className="text-pink-500">View More</p>
+            <img src="/Arrow.png" alt="" />
+          </div>
+        </Link>
       </div>
-      <img ref={(el) => (imageRefs.current[index] = el)} src={work.thumbnail} alt="" className="w-1/3" />
     </div>
   </div>
 )

@@ -55,7 +55,7 @@ export default function ContactForm() {
   return (
     <Button
       as="div"
-      containerClassName={"max-w-4xl w-full"}
+      containerClassName={"md:max-w-4xl w-10/12 md:w-full"}
       duration={5000}
     >
       <div

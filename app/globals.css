@@ -5,11 +5,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-
 @font-face {
   font-family: "Oswald";
   src: url("../app/fonts/Oswald-VariableFont_wght.ttf");
 }
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('/grotesk/grotesk-regular.otf') format('opentype');
+  font-weight: 400; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('/grotesk/grotesk-medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('/grotesk/grotesk-bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('/grotesk/grotesk-extra-bold.otf') format('opentype');
+  font-weight: 900; /* Bold */
+  font-style: normal;
+}
+
 
 :root {
   --background: #ffffff;

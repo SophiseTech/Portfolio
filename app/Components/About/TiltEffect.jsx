@@ -13,7 +13,7 @@ function throttle(func, delay) {
   };
 }
 
-export const TiltEffect = ({label,imageSrc}) => {
+export const TiltEffect = ({label,imageSrc, className}) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const onMouseMove = useCallback(
@@ -39,7 +39,7 @@ export const TiltEffect = ({label,imageSrc}) => {
   return (
     <>
       <div
-        className="card relative h-60 w-60 rounded-xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
+        className={"card relative h-52 md:h-80 flex-1 rounded-xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform "+className}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
         style={{
@@ -49,8 +49,8 @@ export const TiltEffect = ({label,imageSrc}) => {
       >
        
         <div className=" absolute -inset-1 rounded-lg " />
-        <div class="rounded-3xl p-px bg-gradient-to-b from-blue-300 to-pink-300 dark:from-blue-800 dark:to-purple-800 ">
-    <div class=" flex flex-col justify-center gap-10 items-center rounded-[calc(1.5rem-1px)] p-10 dark:bg-gray-900">
+        <div class="h-full rounded-sm p-px bg-gradient-to-b from-blue-300 to-pink-300 dark:from-blue-800 dark:to-purple-800 ">
+    <div class="h-full flex flex-col justify-center gap-10 items-center rounded-sm p-5 md:p-10 dark:bg-gray-900">
       
       <div class="text-white font-oswald">
         {label}
