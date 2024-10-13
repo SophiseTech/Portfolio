@@ -1,11 +1,13 @@
 "use client"
 import { animateOut } from "@/app/Components/animate"
 import { usePathname, useRouter } from "next/navigation"
+import { useState } from "react"
 
 
 const TransitionLink = ({ href, label, className, children }) => {
   const router = useRouter()
   const pathname = usePathname()
+
 
   const handleClick = () => {
     if (pathname !== href) {

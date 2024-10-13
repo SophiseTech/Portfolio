@@ -45,7 +45,7 @@ function About() {
 
   return (
     <>
-      <div className="min-h-screen relative ">
+      <div id="about" className="min-h-screen relative">
         <div className="w-full shadow-heroBottomGradient absolute left-0 right-0 -top-2 bg-background "></div>
         <div className="p-6 md:p-0 md:pt-10 md:w-10/12 md:m-auto">
           <div className=" w-full md:w-3/4  py-6 gap-10 relative z-50">
