@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -63,8 +63,8 @@ export default function ContactForm() {
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
           Get a call from us!
         </h2>
-        <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Our executives will call you within 20 minutes!
+        <p className="text-neutral-600 text-sm mt-2 dark:text-neutral-300">
+          Get personalized support—our executives will connect with you within 20 minutes
         </p>
         <form className="my-8" onSubmit={handleSubmit}>
           <LabelInputContainer className="mb-4">

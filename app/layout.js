@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./Components/NavBar/Main";
+import Progressbar from "@/app/Components/Progressbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +30,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${neo.variable} antialiased`}
       >
-        <NavBar/>
+        <div className="anim-container absolute h-screen overflow-hidden inset-0 items-center justify-center hidden">
+          <div id="anim1" className="anim1 h-1/2 absolute inset-0 bg-black z-[100] -translate-y-full"></div>
+          <Progressbar />
+          <div id="anim2" className="anim2 h-1/2 absolute inset-0 bg-black z-[100] translate-y-[200%]"></div>
+        </div>
+        <NavBar />
         {children}
       </body>
     </html>

@@ -1,4 +1,5 @@
 import GhostButtons from "@/app/Components/Buttons/GhostButtons";
+import TransitionLink from "@/app/Components/TransitionLink";
 import Link from "next/link";
 
 function NavBar() {
@@ -27,13 +28,13 @@ function NavBar() {
   )
 }
 
-const ListItem = ({ name, path="/#" }) => {
+const ListItem = ({ name, path = "/#" }) => {
   return (
-    <Link href={path}>
+    <TransitionLink href={path}>
       <li className="cursor-pointer py-2 px-5 mx-2 my-2 hover:backdrop-blur-sm hover:bg-white/5 hover:rounded-full hover:shadow-lg hover:border-1 transition-all">
         {name}
       </li>
-    </Link>
+    </TransitionLink>
   );
 };
 

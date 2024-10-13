@@ -1,6 +1,3 @@
-'use client'
-import Earth2 from "@/app/Components/Cobe"
-import { useState } from "react";
 import ContactForm from "@/app/Components/Contact/Form";
 
 function Contact() {
