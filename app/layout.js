@@ -3,6 +3,8 @@ import "./globals.css";
 import NavBar from "./Components/NavBar/Main";
 import Progressbar from "@/app/Components/Progressbar";
 
+import FAB from "./Components/Fab/Main";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -36,7 +38,9 @@ export default function RootLayout({ children }) {
           <div id="anim2" className="anim2 h-1/2 absolute inset-0 bg-black z-[100] translate-y-[200%]"></div>
         </div>
         <NavBar />
+        <FAB />
         {children}
+
       </body>
     </html>
   );
