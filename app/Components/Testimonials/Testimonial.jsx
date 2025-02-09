@@ -2,7 +2,7 @@
 function Testimonials({ review: { imgSrc, reviews, customerData, companyName, rating } }) {
   return (
 
-    <div className="w-[75vw] md:w-[70vw] h-full bg-gradient-to-tr from-neutral-600 to-neutral-700 p-px  m-auto " >
+    <div className="w-[75vw] md:w-[50vw] h-full bg-gradient-to-tr from-neutral-600 to-neutral-700 p-px  m-auto " >
       <div className="p-5 md:first:p-10 h-full  bg-background flex justify-start items-start gap-5 ">
         <div className="relative w-4/12 h-full hidden md:flex items-center justify-center">
           <img src="/testimonialBg.svg" className="opacity-20" alt="" />

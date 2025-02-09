@@ -6,26 +6,26 @@ function TestimonialsArea() {
   let testimonialData = [
     {
       id: 0,
-      imgSrc: 'https://randomuser.me/api/portraits/men/32.jpg',
-      reviews: "lorem Lorem ipsum dolor sit amet. Qui eaque animi aut voluptatem quae eum iusto obcaecati. Vel minima debitis et quia nihil vel eveniet ullam aut reiciendis molestiae et nisi deleniti non sapiente rerum est quod vitae.",
-      customerData: "Mark",
-      companyName: "XYZ Company",
+      imgSrc: 'reviews/yoroi.jpg',
+      reviews: "I had my website developed by Nyon Tech and i am happy about the output. We had a great interaction to accomplish what I was looking for.",
+      customerData: "Vipin M J",
+      companyName: "YOROI Entertainment, Canada",
       rating: 5
     },
     {
       id: 1,
-      imgSrc: 'https://randomuser.me/api/portraits/men/36.jpg',
-      reviews: "lorem Lorem ipsum dolor sit amet. Qui eaque animi aut voluptatem quae eum iusto obcaecati. Vel minima debitis et quia nihil vel eveniet ullam aut reiciendis molestiae et nisi deleniti non sapiente rerum est quod vitae.",
-      customerData: "Mark",
-      companyName: "XYZ Company",
+      imgSrc: 'reviews/rio.jpg',
+      reviews: "Good service. Unique designs and timely delivery. Highly recommend",
+      customerData: "Derin",
+      companyName: "Rio Livings",
       rating: 5
     },
     {
       id: 2,
-      imgSrc: 'https://randomuser.me/api/portraits/men/40.jpg',
-      reviews: "lorem Lorem ipsum dolor sit amet. Qui eaque animi aut voluptatem quae eum iusto obcaecati.",
-      customerData: "Mark",
-      companyName: "XYZ Company",
+      imgSrc: 'reviews/knr.jpg',
+      reviews: "We had a great time working with Nyon Tech. They provided good service and was patient throughout the process",
+      customerData: "Amal Jose P",
+      companyName: "KNR Technologies",
       rating: 4
     }
   ]

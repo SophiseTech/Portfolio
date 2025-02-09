@@ -12,7 +12,7 @@ function NavBar() {
     console.log("menu clicked")
   }
   return (
-    <div className="w-full md:w-10/12 md:m-auto block fixed top-0 left-0 right-0 z-[102]">
+    <div className="w-full md:w-10/12 md:m-auto block absolute lg:fixed top-0 left-0 right-0 z-[102]">
       <div className={`w-full ${isMenuOpen ? "backdrop-blur-md shadow-lg h-screen" : "backdrop-blur-none"} md:h-auto transition-all ease-linear md:backdrop-blur-none md:bg-transparent md:shadow-none pb-5`}>
         <div className="grid grid-cols-2 gap-4 m-auto md:grid-cols-3 items-center w-full">
           <div className="text-5xl font-semibold py-5 md:m-0 mx-5 my-4 font-neo uppercase">Nyon</div>
@@ -27,10 +27,10 @@ function NavBar() {
           <div className="items-center justify-center hidden w-full md:flex">
             <ul className="flex backdrop-blur-lg  bg-white/5 border border-stone-800 rounded-full shadow-lg shadow-white/5 border-1 my-2 px-3">
 
-              <ListItem name="Home" path='/' />
+              <ListItemWithoutTransition name="Home" path='/' />
               <ListItemWithoutTransition name="About" path='/#about' />
-              <ListItemWithoutTransition name="Contacts" path='#contact' />
-              <ListItem name="Works" path={'/works'} />
+              <ListItemWithoutTransition name="Works" path={'/works'} />
+              <ListItemWithoutTransition name="Contact Us" path='#contact' />
             </ul>
           </div>
           <div className="hidden md:block justify-self-end">

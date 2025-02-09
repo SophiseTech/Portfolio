@@ -13,7 +13,8 @@ export const works = [
       "/work mockups/mobile/ghc2.png",
       "/work mockups/mobile/ghc3.png",
     ],
-    desktopSS: "/work mockups/desktop/growthlab.jpg"
+    desktopSS: "/work mockups/desktop/growthlab.jpg",
+    singleSnap: "/singlesnaps/ghc.png"
   },
   {
     id: 1,
@@ -26,24 +27,32 @@ export const works = [
     clientName: "Yoroi Entertainment",
     path: "/works/yoroientertainment",
     mobileSS: [
-      "/work mockups/mobile/yoroi1.png",
+      "/work mockups/mobile/rio1.png",
       "/work mockups/mobile/yoroi2.png",
       "/work mockups/mobile/yoroi3.png",
     ],
-    desktopSS: "/work mockups/desktop/yoroi.png"
+    desktopSS: "/work mockups/desktop/yoroi.png",
+    singleSnap: "/singlesnaps/yoroi.png"
   },
   {
     id: 2,
-    title: "IoT Cloud Data Visualization Platform",
-    description: `Designed for IoT device owners, this cloud platform was built to transform raw device data into insightful visual representations. 
-    With features that allow users to share, download reports, and manage multiple devices through team collaboration, 
-    the platform ensures data is not only accessible but actionable.`,
-    thumbnail: "/work mockups/abhram_tab_mob.png",
-    clientName: "Abhram",
+    title: "Live Construction Progress at Your Fingertips",
+    description: `Stay updated on your project with live IP camera streaming, progress tracking, timeline management, 
+    and payment schedule tracking—all in one app. 
+    Get real-time insights, ensure transparency, and stay in control of your construction journey anytime, anywhere.`,
+    thumbnail: "/work mockups/rio.png",
+    clientName: "Rio Livings",
+    singleSnap: "/singlesnaps/rio.png",
+    desktopSS: "/work mockups/desktop/rio.png",
+    mobileSS: [
+      "/work mockups/mobile/rio1.png",
+      "/work mockups/mobile/rio2.png",
+      "/work mockups/mobile/rio3.png",
+    ],
   }
 ]
 
 export const navItems = {
-  home: {label: 'HOME', path: "/"},
-  works: {label: "WORKS", path: "/works"}
+  home: { label: 'HOME', path: "/" },
+  works: { label: "WORKS", path: "/works" }
 }

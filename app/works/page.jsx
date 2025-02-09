@@ -16,7 +16,7 @@ function page() {
 const WorkItem = ({ work }) => (
   <div className="basis-1/3 bg-slate-900 p-5 rounded-md group">
     <div className="bg-[url('/workitem_bg.png')] bg-cover bg-no-repeat px-10 pt-10 bg-slate-800 flex justify-center overflow-hidden rounded-md">
-      <img loading="lazy" src="/singlesnaps/yoroi.png " alt="" className="w-full rotate-3 relative -bottom-3 shadow-xl group-hover:scale-105 transition-all duration-500" />
+      <img loading="lazy" src={work.singleSnap} alt="" className="w-full rotate-3 relative -bottom-3 shadow-xl group-hover:scale-105 transition-all duration-500" />
     </div>
     <div className="mt-9">
       <h1 className="text-xl font-bold font-grotesk">{work.clientName}</h1>
