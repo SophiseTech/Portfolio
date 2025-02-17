@@ -10,12 +10,12 @@ function Main() {
     <div className="h-screen overflow-hidden relative flex items-center justify-center p-6 md:p-0">
       <ShootingStars />
       <StarsBackground />
-      <img src="/spotlight.png" alt="" className="left-0 top-0 absolute" />
-      <img src="/spotlight.png" alt="" className="scale-x-[-1] absolute right-0 top-0" />
+      <img src="/spotlight.png" alt="sptlight_1" className="left-0 top-0 absolute" />
+      <img src="/spotlight.png" alt="sptlight_2" className="scale-x-[-1] absolute right-0 top-0" />
       <div className="w-full md:w-8/12 flex flex-col items-center">
-        <p className="text-center uppercase tracking-widest font-grotesk mb-4 md:mb-2 font-thin text-purple-500 text-xs md:text-sm">Your Premier Partner in Digital Solutions</p>
+        <h2 className="text-center uppercase tracking-widest font-grotesk mb-4 md:mb-2 font-thin text-purple-500 text-xs md:text-sm">Your Premier Partner in Digital Solutions</h2>
         <h1 className="text-center first-letter:uppercase text-4xl md:text-6xl font-bold font-grotesk">Crafting Seamless Digital Spaces That Drive Your <Cover className="text-purple-400">Business Forward</Cover></h1>
-        <p className="text-center mt-6 md:mt-3 tracking-wider md:text-xl">Have an idea or want to build your online presence? Let's connect today!</p>
+        <h2 className="text-center mt-6 md:mt-3 tracking-wider md:text-xl">Have an idea or want to build your online presence? Let's connect today!</h2>
         <Link href={'/#contact'}>
           <Button />
         </Link>

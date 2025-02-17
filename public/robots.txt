@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://nyontech.vercel.app
+Host: https://nyon.co.in
 
 # Sitemaps
-Sitemap: https://nyontech.vercel.app/sitemap.xml
+Sitemap: https://nyon.co.in/sitemap.xml
