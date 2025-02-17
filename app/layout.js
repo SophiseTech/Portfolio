@@ -3,6 +3,8 @@ import "./globals.css";
 import NavBar from "./Components/NavBar/Main";
 import Progressbar from "@/app/Components/Progressbar";
 import Fab from "@/app/Components/Fab/Main";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,6 +46,47 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content="/preview.png" />
         <link rel="canonical" href="https://nyon.co.in" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Nyon Tech",
+              "url": "https://nyon.co.in",
+              "logo": "https://nyon.co.in/favicon.ico",  // Update this URL if you have a logo.
+              "image": "https://nyon.co.in/preview.png", // Update with your cover/hero image URL.
+              "description": "Nyon Tech is a full-service web design agency offering custom website development, UX/UI design, SEO, eCommerce, and mobile app development. We deliver innovative digital solutions and serve clients across India.",
+              "telephone": "+91 7736426595",
+              "email": "info@nyon.co.in",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Building No 134, Priyadarshini road",
+                "addressLocality": "Perumbavoor",
+                "addressRegion": "Kerala", // Assuming Kerala as the region.
+                "addressCountry": "IN"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "India"
+              },
+              "openingHours": "Mo-Fr 09:00-18:00",
+              "priceRange": "$",
+              "sameAs": [
+                "https://www.facebook.com/nyontech", // Update if available.
+                "https://in.linkedin.com/company/nyontech", // Update if available.
+                "https://twitter.com/nyontech" // Update if available.
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8", // Example rating, update as needed.
+                "reviewCount": "124"  // Example count, update as needed.
+              },
+              "foundingDate": "2022", // Update the year when Nyon Tech was founded.
+              "currenciesAccepted": "INR"
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${neo.variable} antialiased`}
@@ -57,6 +100,9 @@ export default function RootLayout({ children }) {
         <Fab />
         {children}
 
+
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
